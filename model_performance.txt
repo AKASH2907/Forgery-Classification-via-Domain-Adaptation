@@ -1,0 +1,233 @@
+
+VGG-16 -> 8k Dataset (Batch size-32) Trained from scratch -> 10M params
+
+4 [2.5870352, 0.73944414, 0.92379546, 0.4375, 0.609375]
+Iteration 4, source accuracy =  0.50850, target accuracy = 0.34935
+Iteration 4, source accuracy =  0.09359, target accuracy = 0.04146
+9 [2.3001287, 0.6663174, 0.8169056, 0.515625, 0.453125]
+Iteration 9, source accuracy =  0.51013, target accuracy = 0.35156
+Iteration 9, source accuracy =  0.11714, target accuracy = 0.04725
+14 [2.9030704, 0.72558314, 1.0887437, 0.546875, 0.515625]
+Iteration 14, source accuracy =  0.50600, target accuracy = 0.34854
+Iteration 14, source accuracy =  0.06039, target accuracy = 0.03513
+19 [2.5591428, 0.6745342, 0.9423043, 0.46875, 0.53125]
+Iteration 19, source accuracy =  0.49950, target accuracy = 0.34231
+Iteration 19, source accuracy =  0.00150, target accuracy = 0.00183
+24 [2.819502, 0.6645438, 1.0774791, 0.546875, 0.546875]
+Iteration 24, source accuracy =  0.49962, target accuracy = 0.34251
+Iteration 24, source accuracy =  0.00744, target accuracy = 0.00366
+29 [2.2795331, 0.69764733, 0.7909429, 0.46875, 0.5625]
+Iteration 29, source accuracy =  0.50087, target accuracy = 0.34854
+Iteration 29, source accuracy =  0.07247, target accuracy = 0.04872
+34 [2.2584624, 0.6991379, 0.77966225, 0.46875, 0.5625]
+Iteration 34, source accuracy =  0.49800, target accuracy = 0.46432
+Iteration 34, source accuracy =  0.42349, target accuracy = 0.48622
+39 [2.0976262, 0.6971944, 0.7002159, 0.53125, 0.59375]
+Iteration 39, source accuracy =  0.48888, target accuracy = 0.55457
+Iteration 39, source accuracy =  0.54491, target accuracy = 0.66505
+44 [2.5285757, 0.6839916, 0.922292, 0.53125, 0.53125]
+Iteration 44, source accuracy =  0.48800, target accuracy = 0.48362
+Iteration 44, source accuracy =  0.44044, target accuracy = 0.53753
+49 [2.5763657, 0.73201793, 0.9221739, 0.453125, 0.46875]
+Iteration 49, source accuracy =  0.49300, target accuracy = 0.46111
+Iteration 49, source accuracy =  0.40736, target accuracy = 0.48630
+
+
+VGG-16 -> 5k Dataset (Batch size-32) Trained from scratch -> 10M params
+
+4 [3.0941358, 0.73829037, 1.1779227, 0.515625, 0.46875]
+Iteration 4, source accuracy =  0.49467, target accuracy = 0.51397
+Iteration 4, source accuracy =  0.54637, target accuracy = 0.60046
+9 [2.991872, 0.68256736, 1.1546524, 0.5625, 0.46875]
+Iteration 9, source accuracy =  0.49688, target accuracy = 0.60060
+Iteration 9, source accuracy =  0.61284, target accuracy = 0.73282
+14 [2.9684834, 0.742146, 1.1131687, 0.484375, 0.484375]
+Iteration 14, source accuracy =  0.49447, target accuracy = 0.57789
+Iteration 14, source accuracy =  0.58395, target accuracy = 0.70331
+19 [2.8132186, 0.71812755, 1.0475456, 0.515625, 0.5]
+Iteration 19, source accuracy =  0.51497, target accuracy = 0.44724
+Iteration 19, source accuracy =  0.44337, target accuracy = 0.45480
+24 [2.813531, 0.70227885, 1.055626, 0.515625, 0.5]
+Iteration 24, source accuracy =  0.50935, target accuracy = 0.41146
+Iteration 24, source accuracy =  0.36216, target accuracy = 0.33151
+29 [2.733358, 0.6810949, 1.0261315, 0.46875, 0.453125]
+Iteration 29, source accuracy =  0.50412, target accuracy = 0.34995
+Iteration 29, source accuracy =  0.07568, target accuracy = 0.05824
+34 [2.3665345, 0.74769557, 0.80941945, 0.4375, 0.609375]
+Iteration 34, source accuracy =  0.50372, target accuracy = 0.34673
+Iteration 34, source accuracy =  0.04561, target accuracy = 0.03446
+39 [3.15806, 0.6748207, 1.2416197, 0.5, 0.5]
+Iteration 39, source accuracy =  0.50251, target accuracy = 0.34633
+Iteration 39, source accuracy =  0.03883, target accuracy = 0.03272
+44 [2.9966292, 0.71058726, 1.143021, 0.53125, 0.421875]
+Iteration 44, source accuracy =  0.50392, target accuracy = 0.35899
+Iteration 44, source accuracy =  0.10255, target accuracy = 0.09326
+49 [2.9245906, 0.7043394, 1.1101257, 0.515625, 0.484375]
+Iteration 49, source accuracy =  0.52482, target accuracy = 0.44905
+Iteration 49, source accuracy =  0.43607, target accuracy = 0.43705
+
+
+AlexNet -> 5k Dataset (Batch size-32) Trained from scratch -> 3.8M params
+
+4 [3.0169013, 1.0092723, 1.0038145, 0.546875, 0.5]
+Iteration 4, source accuracy =  0.50452, target accuracy = 0.35075
+Iteration 4, source f1_score =  0.08534, target f1_score = 0.05666
+9 [2.8931608, 0.71535146, 1.0889047, 0.53125, 0.453125]
+Iteration 9, source accuracy =  0.49809, target accuracy = 0.34372
+Iteration 9, source f1_score =  0.00873, target f1_score = 0.01091
+14 [2.5568414, 0.7806059, 0.88811773, 0.5625, 0.421875]
+Iteration 14, source accuracy =  0.49769, target accuracy = 0.34251
+Iteration 14, source f1_score =  0.00160, target f1_score = 0.00426
+19 [2.3683963, 0.7297066, 0.8193449, 0.578125, 0.59375]
+Iteration 19, source accuracy =  0.49889, target accuracy = 0.34593
+Iteration 19, source f1_score =  0.02579, target f1_score = 0.02750
+24 [2.3989587, 0.7431066, 0.82792604, 0.578125, 0.5625]
+Iteration 24, source accuracy =  0.49467, target accuracy = 0.43015
+Iteration 24, source f1_score =  0.41179, target f1_score = 0.41583
+29 [2.2093544, 0.71321654, 0.7480689, 0.546875, 0.5625]
+Iteration 29, source accuracy =  0.49327, target accuracy = 0.49849
+Iteration 29, source f1_score =  0.55857, target f1_score = 0.58187
+34 [2.3262138, 0.7180115, 0.8041011, 0.5, 0.59375]
+Iteration 34, source accuracy =  0.49990, target accuracy = 0.51839
+Iteration 34, source f1_score =  0.55666, target f1_score = 0.61317
+39 [2.3656201, 0.76565874, 0.79998064, 0.5, 0.5]
+Iteration 39, source accuracy =  0.50372, target accuracy = 0.39940
+Iteration 39, source f1_score =  0.32077, target f1_score = 0.30865
+44 [2.10317, 0.6621543, 0.72050774, 0.59375, 0.5625]
+Iteration 44, source accuracy =  0.50915, target accuracy = 0.40724
+Iteration 44, source f1_score =  0.35225, target f1_score = 0.34189
+49 [2.493608, 0.7033156, 0.8951462, 0.578125, 0.46875]
+Iteration 49, source accuracy =  0.51417, target accuracy = 0.39638
+Iteration 49, source f1_score =  0.34231, target f1_score = 0.30373
+
+AlexNet -> 10k Dataset (Batch size-32) Trained from scratch -> 3.8M params
+
+4 [3.1927335, 0.84065795, 1.1760378, 0.59375, 0.5]
+Iteration 4, source accuracy =  0.50762, target accuracy = 0.40563
+Iteration 4, source f1_score =  0.23351, target f1_score = 0.28592
+9 [3.139401, 0.9696721, 1.0848644, 0.53125, 0.53125]
+Iteration 9, source accuracy =  0.50650, target accuracy = 0.35216
+Iteration 9, source f1_score =  0.05005, target f1_score = 0.05401
+14 [2.6046176, 0.8374362, 0.8835907, 0.59375, 0.515625]
+Iteration 14, source accuracy =  0.48050, target accuracy = 0.58030
+Iteration 14, source f1_score =  0.56436, target f1_score = 0.70060
+19 [2.9338522, 0.8687864, 1.0325329, 0.4375, 0.53125]
+Iteration 19, source accuracy =  0.48525, target accuracy = 0.54472
+Iteration 19, source f1_score =  0.53247, target f1_score = 0.65073
+24 [2.4930813, 0.5741277, 0.9594768, 0.625, 0.578125]
+Iteration 24, source accuracy =  0.51675, target accuracy = 0.36201
+Iteration 24, source f1_score =  0.17216, target f1_score = 0.11980
+29 [2.3124352, 0.7415949, 0.78542006, 0.578125, 0.609375]
+Iteration 29, source accuracy =  0.52238, target accuracy = 0.36503
+Iteration 29, source f1_score =  0.18267, target f1_score = 0.12420
+34 [2.117728, 0.72548985, 0.69611907, 0.625, 0.609375]
+Iteration 34, source accuracy =  0.52963, target accuracy = 0.42754
+Iteration 34, source f1_score =  0.44897, target f1_score = 0.39456
+39 [2.7769504, 0.7057755, 1.0355874, 0.453125, 0.53125]
+Iteration 39, source accuracy =  0.52963, target accuracy = 0.40844
+Iteration 39, source f1_score =  0.38503, target f1_score = 0.31606
+44 [2.3798842, 0.64256966, 0.8686573, 0.515625, 0.59375]
+Iteration 44, source accuracy =  0.53163, target accuracy = 0.46050
+Iteration 44, source f1_score =  0.42487, target f1_score = 0.46661
+49 [2.547595, 0.73210806, 0.90774345, 0.5, 0.53125]
+Iteration 49, source accuracy =  0.54300, target accuracy = 0.51518
+Iteration 49, source f1_score =  0.55813, target f1_score = 0.59489
+
+AlexNet -> 10k Dataset (Batch size-64) Trained from scratch -> 3.8M params
+
+4 [3.2197187, 0.858701, 1.1805089, 0.5, 0.5234375]
+Iteration 4, source accuracy =  0.51825, target accuracy = 0.35397
+Iteration 4, source f1_score =  0.10911, target f1_score = 0.05858
+9 [3.5522282, 0.73549604, 1.4083661, 0.4765625, 0.390625]
+Iteration 9, source accuracy =  0.51050, target accuracy = 0.35779
+Iteration 9, source f1_score =  0.15165, target f1_score = 0.09924
+14 [2.6106937, 0.6950207, 0.9578365, 0.546875, 0.53125]
+Iteration 14, source accuracy =  0.49562, target accuracy = 0.59437
+Iteration 14, source f1_score =  0.61339, target f1_score = 0.71665
+19 [2.531765, 0.68875736, 0.92150384, 0.53125, 0.5390625]
+Iteration 19, source accuracy =  0.50187, target accuracy = 0.65206
+Iteration 19, source f1_score =  0.66510, target f1_score = 0.78784
+24 [2.5543988, 0.7356261, 0.90938634, 0.5234375, 0.5625]
+Iteration 24, source accuracy =  0.49462, target accuracy = 0.64683
+Iteration 24, source f1_score =  0.65665, target f1_score = 0.78274
+29 [2.716497, 0.65394586, 1.0312755, 0.4921875, 0.5]
+Iteration 29, source accuracy =  0.49575, target accuracy = 0.64563
+Iteration 29, source f1_score =  0.65738, target f1_score = 0.78183
+34 [2.4289496, 0.70255804, 0.8631958, 0.4921875, 0.53125]
+Iteration 34, source accuracy =  0.49662, target accuracy = 0.59196
+Iteration 34, source f1_score =  0.61615, target f1_score = 0.71985
+39 [2.5893495, 0.7101801, 0.93958473, 0.5625, 0.46875]
+Iteration 39, source accuracy =  0.49862, target accuracy = 0.61166
+Iteration 39, source f1_score =  0.62580, target f1_score = 0.74060
+44 [2.4386559, 0.6502918, 0.89418197, 0.5703125, 0.53125]
+Iteration 44, source accuracy =  0.49888, target accuracy = 0.63538
+Iteration 44, source f1_score =  0.65353, target f1_score = 0.76962
+49 [2.1989832, 0.67174494, 0.7636192, 0.5546875, 0.578125]
+Iteration 49, source accuracy =  0.50787, target accuracy = 0.58111
+Iteration 49, source f1_score =  0.63448, target f1_score = 0.70706
+
+AlexNet -> 5k Dataset (Batch size-64) Trained from scratch -> 3.8M params
+
+4 [2.557248, 0.6361023, 0.96057296, 0.609375, 0.53125]
+Iteration 4, source accuracy =  0.50894, target accuracy = 0.41528
+Iteration 4, source f1_score =  0.38355, target f1_score = 0.36387
+9 [2.2657123, 0.68282217, 0.7914451, 0.4921875, 0.625]
+Iteration 9, source accuracy =  0.48482, target accuracy = 0.45166
+Iteration 9, source f1_score =  0.42726, target f1_score = 0.45809
+14 [2.1814475, 0.769445, 0.7060013, 0.484375, 0.6015625]
+Iteration 14, source accuracy =  0.52462, target accuracy = 0.39819
+Iteration 14, source f1_score =  0.36236, target f1_score = 0.28476
+19 [2.2567937, 0.73718774, 0.759803, 0.484375, 0.5625]
+Iteration 19, source accuracy =  0.50593, target accuracy = 0.36643
+Iteration 19, source f1_score =  0.14176, target f1_score = 0.13596
+24 [2.460589, 0.78210294, 0.83924294, 0.46875, 0.5625]
+Iteration 24, source accuracy =  0.50251, target accuracy = 0.35558
+Iteration 24, source f1_score =  0.10488, target f1_score = 0.08817
+29 [2.4212527, 0.7427023, 0.83927524, 0.4921875, 0.578125]
+Iteration 29, source accuracy =  0.51337, target accuracy = 0.38834
+Iteration 29, source f1_score =  0.19701, target f1_score = 0.22353
+34 [2.3099642, 0.7033905, 0.80328685, 0.5234375, 0.5546875]
+Iteration 34, source accuracy =  0.52563, target accuracy = 0.50794
+Iteration 34, source f1_score =  0.47509, target f1_score = 0.56886
+39 [2.2287946, 0.6802105, 0.7742921, 0.515625, 0.609375]
+Iteration 39, source accuracy =  0.51678, target accuracy = 0.54714
+Iteration 39, source f1_score =  0.52752, target f1_score = 0.64004
+44 [2.4446526, 0.698408, 0.87312233, 0.484375, 0.5078125]
+Iteration 44, source accuracy =  0.51437, target accuracy = 0.53387
+Iteration 44, source f1_score =  0.50714, target f1_score = 0.61902
+49 [1.9782839, 0.6412079, 0.668538, 0.5078125, 0.6171875]
+Iteration 49, source accuracy =  0.52462, target accuracy = 0.53447
+Iteration 49, source f1_score =  0.50179, target f1_score = 0.61630
+
+AlexNet -> 11k Dataset (Batch size-64) Trained from scratch -> 3.8M params
+
+4 [2.8109837, 0.8267522, 0.9921157, 0.5078125, 0.5546875]
+Iteration 4, source accuracy =  0.54191, target accuracy = 0.65528
+Iteration 4, source f1_score =  0.70182, target f1_score = 0.79108
+9 [2.8295593, 0.8161861, 1.0066867, 0.46875, 0.5390625]
+Iteration 9, source accuracy =  0.45582, target accuracy = 0.34372
+Iteration 9, source f1_score =  0.00730, target f1_score = 0.00850
+14 [2.4213603, 0.7276465, 0.84685683, 0.453125, 0.59375]
+Iteration 14, source accuracy =  0.45709, target accuracy = 0.34312
+Iteration 14, source f1_score =  0.01485, target f1_score = 0.00910
+19 [2.4627109, 0.7339592, 0.8643759, 0.46875, 0.515625]
+Iteration 19, source accuracy =  0.50827, target accuracy = 0.56543
+Iteration 19, source f1_score =  0.62320, target f1_score = 0.68484
+24 [2.71882, 0.7388731, 0.98997355, 0.3671875, 0.5078125]
+Iteration 24, source accuracy =  0.49300, target accuracy = 0.51477
+Iteration 24, source f1_score =  0.54440, target f1_score = 0.59834
+29 [2.3299608, 0.70821404, 0.8108733, 0.4453125, 0.5703125]
+Iteration 29, source accuracy =  0.48082, target accuracy = 0.37749
+Iteration 29, source f1_score =  0.17673, target f1_score = 0.18350
+34 [2.4033937, 0.70498466, 0.8492045, 0.421875, 0.5546875]
+Iteration 34, source accuracy =  0.51191, target accuracy = 0.43518
+Iteration 34, source f1_score =  0.40916, target f1_score = 0.40792
+39 [1.9721886, 0.7557534, 0.6082176, 0.40625, 0.6328125]
+Iteration 39, source accuracy =  0.53945, target accuracy = 0.62472
+Iteration 39, source f1_score =  0.67953, target f1_score = 0.76098
+44 [2.193553, 0.6960177, 0.7487677, 0.4453125, 0.6171875]
+Iteration 44, source accuracy =  0.54245, target accuracy = 0.65347
+Iteration 44, source f1_score =  0.70129, target f1_score = 0.78909
+49 [2.223763, 0.6845157, 0.7696236, 0.390625, 0.5703125]
+Iteration 49, source accuracy =  0.53973, target accuracy = 0.64884
+Iteration 49, source f1_score =  0.69735, target f1_score = 0.78467
