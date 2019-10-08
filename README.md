@@ -9,9 +9,25 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
 * The number of images are less and the number of parameters needed are huge. It simply overfits the dataset and the test time perfromance is very poor.
 * Pre-trained archirectures are trained on ImageNet dataset in which there is provision for forged images as such. So, it may not perform well in our case.
 
+## Getting Started
+
+* Install the required dependencies:
+ ```javascript
+ pip install -r requirements.txt
+ ```
+* [data_prepare.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/data_prepare.py) - 
+
+* [dann_keras.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/dann_keras.py) - 
+
+* [models.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/models.py) - 
+
 ## Dataset Creation
 
-We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it fullfills our pupose too. 
+We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it fullfills our pupose too. The figure below presents an overview for dataset generation.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22872200/66417249-383d3f80-ea1d-11e9-8726-727e1720f768.png">
+</p>
 
 ## Architecture
 
@@ -20,3 +36,10 @@ We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/66037369-162f5300-e52d-11e9-9dbe-00c93d1b332e.png">
 </p>
+
+
+## Experiments
+
+## Results
+
+## References
