@@ -43,3 +43,7 @@ We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The 
 ## Results
 
 ## References
+
+
+## Future Work
+1) https://github.com/wuhuikai/GP-GAN -> Image Blending using GANs in high resolution images
