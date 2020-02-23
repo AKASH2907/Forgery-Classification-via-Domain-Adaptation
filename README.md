@@ -26,7 +26,7 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
 We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it fullfills our pupose too. The figure below presents an overview for dataset generation.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/22872200/66417249-383d3f80-ea1d-11e9-8726-727e1720f768.png">
+  <img src="https://user-images.githubusercontent.com/22872200/75110744-076e4780-5658-11ea-95d1-f0cb9da4931b.png">
 </p>
 
 ## Architecture
@@ -34,9 +34,12 @@ We used 80 sub-categories of COCO dataset to create a forged dataset. We take ma
 We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The architecture we used in depicted in figure below: 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/22872200/66037369-162f5300-e52d-11e9-9dbe-00c93d1b332e.png">
+  <img src="https://user-images.githubusercontent.com/22872200/75112297-83708b80-5668-11ea-874c-6784fc28f3f9.png">
 </p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22872200/75112287-5fad4580-5668-11ea-8422-321dcfd7920f.png">
+</p>
 
 ## Experiments
 
