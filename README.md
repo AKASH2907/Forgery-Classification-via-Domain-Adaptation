@@ -1,9 +1,21 @@
 # Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation
-Classifying Forged vs Authentic via Domain Adaptation Algorithm (DANN)
 
-In this work, we've used Unsupervised Domain Adapatation Algorithm, Domain Adversarial Neural Network (DANN) to improve the accuracy of classification of copy-move forged images. We created a dataset of 15,000 of forged images from COCO dataset. 
+In this work, using Domain Adversarial Neural Network (DANN) and Deep Domain Confusion (DDC) Domain Adaptation networks, we adapt to the features from a synthetically generated dataset onto a realistic dataset. Our main focus is generalizability across forgery detection in unsupervised conditions, keeping in view to improve the accuracy scores too. 
 
-In domain adaptation, we adapt the target domain feature space to source domain feature space, such that the features remains discriminative amongst classes but the domains becomes invariant. In our case, source domain is COCO forged dataset and target domain is CASIA V2 dataset. Our sorce domain contains of 15,000 images, half of which are authentic and the other half is forged. In target domain, CASIA contains 1300 authentic and 3300 copy-move forged images.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22872200/75251987-bef28d80-5801-11ea-9a15-7625e621368a.png">
+</p>
+
+The repository includes:
+* Generating Copy-Move forgery snthetic data
+* Training dataset preparation
+* Training and testing code for DANN
+* Training and testing code for DDC
+* Base network models for feature extraction
+
+The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this paper (bibtex below). 
+
+In domain adaptation, we adapt the target domain feature space to source domain feature space, such that the features remains discriminative amongst classes but the domains becomes invariant. In our case, source domain is COCO forged dataset and target domain is CASIA V2 and CoMoFoD dataset. Our sorce domain contains of 40,000 images, half of which are authentic and the other half is forged. In target domain, CASIA contains 1300 authentic and 3300 copy-move forged images and CoMoFoD has 200 authentic and 200 forged.
 
 We can't apply direct transfer learning in this case. Mainly, because of two reasons:
 * The number of images are less and the number of parameters needed are huge. It simply overfits the dataset and the test time perfromance is very poor.
@@ -15,13 +27,19 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
  ```javascript
  pip install -r requirements.txt
  ```
-* [data_prepare.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/data_prepare.py) - 
+* [dataset_generation.py]() Generates Copy-Move forged dataset utilizing COCO dataset.
 
-* [dann_keras.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/dann_keras.py) - 
+* [data_prepare.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/data_prepare.py) - Generate numpy arrays of training and testing datasets.
 
-* [models.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/models.py) - 
+* [dann.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/dann_keras.py) - Train the DANN model using AlexNet or VGG-7 as the base feature extraction architecture.
 
-## Dataset Creation
+* [ddc.py]() - Train and test the DDC model using AlexNet and VGG-7 feature extractors.
+
+* [models.py](https://github.com/AKASH2907/Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation/blob/master/models.py) - AlexNet and VGG-7 base architecture models.
+
+## Step by Step Domain Adaptation
+
+### 1. Dataset Generation
 
 We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it fullfills our pupose too. The figure below presents an overview for dataset generation.
 
@@ -29,7 +47,7 @@ We used 80 sub-categories of COCO dataset to create a forged dataset. We take ma
   <img src="https://user-images.githubusercontent.com/22872200/75110744-076e4780-5658-11ea-95d1-f0cb9da4931b.png">
 </p>
 
-## Architecture
+### 2. Domain Adaptation 
 
 We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The architecture we used in depicted in figure below: 
 
@@ -45,8 +63,11 @@ We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The 
 
 ## Results
 
+
+
 ## References
 
 
 ## Future Work
-1) https://github.com/wuhuikai/GP-GAN -> Image Blending using GANs in high resolution images
+- [ ] https://github.com/wuhuikai/GP-GAN -> Image Blending using GANs in high resolution images.
+- [ ] Improve the precision score keeping the high recall.
