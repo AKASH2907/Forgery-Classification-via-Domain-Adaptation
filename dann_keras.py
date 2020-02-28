@@ -78,21 +78,6 @@ def write_log(callback, names, logs, batch_no):
 def build_models(model_name):
     """Creates three different models, one used for source only training, two used for domain adaptation"""
     inputs = Input(shape=(224, 224, 3)) 
-    # x4 = Conv2D(32, (3, 3), strides=(1, 1), kernel_initializer=init, padding='same')(inputs)
-    # x4 = BatchNormalization()(x4)
-    # x4 = Activation('relu')(x4)
-    # x4 = MaxPooling2D(pool_size=(2, 2))(x4)
-
-
-    # x4 = Conv2D(64, (3, 3), strides=(1, 1), kernel_initializer=init, padding='same')(x4)
-    # x4 = BatchNormalization()(x4)
-    # x4 = Activation('relu')(x4)
-    # x4 = MaxPooling2D(pool_size=(2, 2))(x4)
-
-    # x4 = Conv2D(128, (3, 3), strides=(1, 1), kernel_initializer=init, padding='same')(x4)
-    # x4 = BatchNormalization()(x4)
-    # x4 = Activation('relu')(x4)
-    # x4 = MaxPooling2D(pool_size=(2, 2))(x4)
 
     if model_name=='alexnet':
     	x4 = alexnet(inputs)
@@ -140,13 +125,6 @@ def build_models(model_name):
     return comb_model, source_classification_model, domain_classification_model, embeddings_model
 
 
-# a, b, c, d = build_models('alexnet')
-
-# print(a.summary())
-# print(b.summary())
-# print(c.summary())
-# print(d.summary())
-
 def batch_generator(data, batch_size):
     """Generate batches of data.
 
@@ -159,10 +137,6 @@ def batch_generator(data, batch_size):
         tbr = [k[mini_batch_indices] for k in data]
         yield tbr
 
-
-
-
-#SAMPLING_ITERATIONS = 3000
 
 def train(Xs, ys, Xt, yt,  enable_dann = True, n_iterations = 50):
     
@@ -179,27 +153,19 @@ def train(Xs, ys, Xt, yt,  enable_dann = True, n_iterations = 50):
 
 
 #     y_class_dummy = np.ones((len(Xt), 2))
-    y_adversarial_1 = to_categorical(np.array(([1] * batch_size + [0] * batch_size)))
-    # print(y_adversarial_1.shape)
-    
+    y_adversarial_1 = to_categorical(np.array(([1] * batch_size + [0] * batch_size)))    
     
     sample_weights_class = np.array(([1] * batch_size + [0] * batch_size))
     sample_weights_adversarial = np.ones((batch_size * 2,))
-    # print(sample_weights_class.shape)
-    # print(sample_weights_adversarial.shape)
     
     S_batches = batch_generator([Xs, to_categorical(ys)], batch_size)
     T_batches = batch_generator([Xt, np.zeros(shape = (len(Xt),2))], batch_size)
     
-#     for i in range(n_iterations):
     for i in range(n_iterations):
-        # # print(y_class_dummy.shape, ys.shape)
         y_adversarial_2 = to_categorical(np.array(([0] * batch_size + [1] * batch_size)))
                 
         X0, y0 = next(S_batches)
-        # print(X0.shape, y0.shape)
         X1, y1 = next(T_batches)
-        # print(X1.shape, y1.shape)
 
         X_adv = np.concatenate([X0, X1])
         y_class = np.concatenate([y0, np.zeros_like(y0)])
@@ -256,7 +222,3 @@ def train(Xs, ys, Xt, yt,  enable_dann = True, n_iterations = 50):
 
 
 embs = train(Xs, y_s, Xt, y_t, enable_dann=True)
-
-
-# new_model = Model(inputs=input_1, outputs=conv_5)
-# new_model = Model(model.inputs, model.layers[-3].output)  
