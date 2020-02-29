@@ -55,16 +55,30 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
 
 ### 2. Domain Adaptation 
 
-1) Domain Adversarial Neural Network(DANN): It has two separate heads: Source classifier Head and Domain classifier head. 
-
+1) DANN: It has two separate heads: Source classifier Head and Domain classifier head.
+  * Source Head: Feature parameters(ϴ<sub>f</sub>) and label classifier parameter optimized to reduce classification loss.
+  * Domain Head: Feature parameters maximizes domain loss to make distributions similar.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569727-b0170f80-5a7b-11ea-9d33-7ea3c6467d24.png">
 </p>
 
-2) Deep Domain Confusion:
+DANN Loss function:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22872200/75612024-d2755f80-5b45-11ea-9c96-f68e512c6cbc.png">
+</p>
+
+2) DDC: Minimizes the distance between source and target distribution via Maximum Mean Discrepancy (MMD) loss. 
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569759-c1f8b280-5a7b-11ea-8740-a4b1e0b75de5.png">
+</p>
+
+DDC Loss Function:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22872200/75612038-f5a00f00-5b45-11ea-9809-7052ae5a938d.png">
 </p>
 
 ## Experiments
