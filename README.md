@@ -41,11 +41,13 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
 
 ### 1. Dataset Generation
 
-We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it fullfills our pupose too. The figure below presents an overview for dataset generation.
+1) **Semantic Inpainting:** We used 80 sub-categories of COCO dataset to create a forged dataset. We take mask of each category and cut them out. Then, we fill those region via Deep Semantic Inpainting. In this way, the image looks natural as well as it make the network focus on edge discrepancies around the forged region. The figure below presents an overview of semantic inpainting dataset generation approach:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569484-354df480-5a7b-11ea-8f9e-eda5b54c6253.png">
 </p>
+
+2) **Copy-Move Forgery:** Images alongwith their segmentation is mask selected. We compare the mask of all the areas. Keeping a minimum threshold, we select the mask with the largest area. We apply a image matting so that pasted region could easily blend in. Overnight 60,000 images can be generated.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569534-4d257880-5a7b-11ea-8636-3495d521d478.png">
@@ -53,12 +55,14 @@ We used 80 sub-categories of COCO dataset to create a forged dataset. We take ma
 
 ### 2. Domain Adaptation 
 
-We used Domain Adversarial NN for unsupervised Domain Adaptation algorithm. The architecture we used in depicted in figure below: 
+1) Domain Adversarial Neural Network(DANN): It has two separate heads: Source classifier Head and Domain classifier head. 
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569727-b0170f80-5a7b-11ea-9d33-7ea3c6467d24.png">
 </p>
 
+2) Deep Domain Confusion:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569759-c1f8b280-5a7b-11ea-8740-a4b1e0b75de5.png">
 </p>
