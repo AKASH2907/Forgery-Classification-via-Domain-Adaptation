@@ -66,7 +66,7 @@ We can't apply direct transfer learning in this case. Mainly, because of two rea
 DANN Loss function:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/22872200/75612024-d2755f80-5b45-11ea-9c96-f68e512c6cbc.png">
+  <img height="100" src="https://user-images.githubusercontent.com/22872200/75612024-d2755f80-5b45-11ea-9c96-f68e512c6cbc.png">
 </p>
 
 2) DDC: Minimizes the distance between source and target distribution via Maximum Mean Discrepancy (MMD) loss. 
@@ -78,8 +78,20 @@ DANN Loss function:
 DDC Loss Function:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/22872200/75612038-f5a00f00-5b45-11ea-9809-7052ae5a938d.png">
+  <img height="35" src="https://user-images.githubusercontent.com/22872200/75612038-f5a00f00-5b45-11ea-9809-7052ae5a938d.png">
 </p>
+
+## Dataset Information
+
+| Image Properties  | **CASIA** | **CoMoFoD** |
+| :------------:| :------------:| :------------:|
+| Resolution | 240x160 - 900x600 | 512x512 |
+| # pristeine/ tampered | 1701/3274 | 200/200 |
+| Image Format  | JPG, TIFF | PNG |
+| Post-image processing | Translation, Rotation, Scaling, Affine Transformation | Translation, Rotation, Scaling, Affine Transformation
+
+
+
 
 ## Experiments
 
@@ -87,15 +99,29 @@ DDC Loss Function:
   <img src="https://user-images.githubusercontent.com/22872200/75570108-77c40100-5a7c-11ea-8ddf-e03f00fb27a7.png">
 </p>
 
+***COCO->CASIA:***
+* Train/Test Distribution: 4000/1000 images
+* More images -> Able to optimize huge number of parameters
+* DANN+VGG-7 outperforms others
+
+***COCO->CoMoFoD:***
+* Train/Test Distribution: 200/200 images
+* Less images -> Can't optimize huge number of parameters
+* DDC+AlexNet outperforms others
+
 ## Results
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569630-7cd48080-5a7b-11ea-9403-b95c5791f0af.png">
 </p>
 
+* Compare to BusterNet where they have used **1 lakh** images for supervised training, we used **40k** images to achieve better accuracy.
+* Our approach using **Domain Adaptation** improves the previously reported baseline.
 
 ## References
-
+[1] Ganin, Yaroslav et al. “Domain-Adversarial Training of Neural Networks.” J. Mach. Learn. Res. 17 (2015). [Link](https://arxiv.org/abs/1505.07818) </br>
+[2] Tzeng, Eric et al. “Deep Domain Confusion: Maximizing for Domain Invariance.” ArXiv abs/1412.3474 (2014). [Link](https://arxiv.org/abs/1412.3474) </br>
+[3] Nazeri, Kamyar et al. “EdgeConnect: Generative Image Inpainting with Adversarial Edge Learning.” ArXiv abs/1901.00212 (2019). [Link](https://arxiv.org/abs/1901.00212)
 
 ## Future Work
 - [ ] https://github.com/wuhuikai/GP-GAN -> Image Blending using GANs in high resolution images.
