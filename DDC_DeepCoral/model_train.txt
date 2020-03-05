@@ -1,0 +1,186 @@
+1) CMF 10k pretrained=True mmd loss alex
+
+70 31 8
+Train Epoch: [1/5 (00%)], cls_Loss: 0.679930, transfer_loss: 0.042167, total_Loss: 1.101604
+Train Epoch: [1/5 (32%)], cls_Loss: 0.703448, transfer_loss: 0.040679, total_Loss: 1.110239
+Train Epoch: [1/5 (64%)], cls_Loss: 0.717448, transfer_loss: 0.040752, total_Loss: 1.124966
+Train Epoch: [1/5 (96%)], cls_Loss: 0.722498, transfer_loss: 0.040587, total_Loss: 1.128367
+
+cmf --> casia: max correct: 2155, accuracy 54.00%
+
+Train Epoch: [2/5 (00%)], cls_Loss: 0.719949, transfer_loss: 0.040565, total_Loss: 1.125595
+Train Epoch: [2/5 (32%)], cls_Loss: 0.717596, transfer_loss: 0.040581, total_Loss: 1.123405
+Train Epoch: [2/5 (64%)], cls_Loss: 0.718170, transfer_loss: 0.040504, total_Loss: 1.123212
+Train Epoch: [2/5 (96%)], cls_Loss: 0.716384, transfer_loss: 0.040469, total_Loss: 1.121070
+
+cmf --> casia: max correct: 2280, accuracy 57.00%
+
+Train Epoch: [3/5 (00%)], cls_Loss: 0.716180, transfer_loss: 0.040456, total_Loss: 1.120735
+Train Epoch: [3/5 (32%)], cls_Loss: 0.712907, transfer_loss: 0.040477, total_Loss: 1.117682
+Train Epoch: [3/5 (64%)], cls_Loss: 0.708528, transfer_loss: 0.040481, total_Loss: 1.113340
+Train Epoch: [3/5 (96%)], cls_Loss: 0.706086, transfer_loss: 0.040472, total_Loss: 1.110805
+
+cmf --> casia: max correct: 2441, accuracy 61.00%
+
+Train Epoch: [4/5 (00%)], cls_Loss: 0.706036, transfer_loss: 0.040467, total_Loss: 1.110704
+Train Epoch: [4/5 (32%)], cls_Loss: 0.703059, transfer_loss: 0.040421, total_Loss: 1.107272
+Train Epoch: [4/5 (64%)], cls_Loss: 0.699445, transfer_loss: 0.040411, total_Loss: 1.103555
+Train Epoch: [4/5 (96%)], cls_Loss: 0.695708, transfer_loss: 0.040396, total_Loss: 1.099663
+
+cmf --> casia: max correct: 2141, accuracy 53.00%
+
+Train Epoch: [5/5 (00%)], cls_Loss: 0.695226, transfer_loss: 0.040412, total_Loss: 1.099346
+Train Epoch: [5/5 (32%)], cls_Loss: 0.691789, transfer_loss: 0.040435, total_Loss: 1.096139
+Train Epoch: [5/5 (64%)], cls_Loss: 0.689270, transfer_loss: 0.040423, total_Loss: 1.093497
+Train Epoch: [5/5 (96%)], cls_Loss: 0.687794, transfer_loss: 0.040407, total_Loss: 1.091861
+
+cmf --> casia: max correct: 2114, accuracy 53.00%
+
+cmf --> casia: max correct: 553, accuracy 55.00%
+
+
+2) 10k cmf resnet 18 pretrained true
+
+70 31 8
+Train Epoch: [1/5 (00%)], cls_Loss: 0.692856, transfer_loss: 0.042826, total_Loss: 1.121112
+Train Epoch: [1/5 (32%)], cls_Loss: 0.694490, transfer_loss: 0.041472, total_Loss: 1.109211
+Train Epoch: [1/5 (64%)], cls_Loss: 0.693447, transfer_loss: 0.041178, total_Loss: 1.105226
+Train Epoch: [1/5 (96%)], cls_Loss: 0.694270, transfer_loss: 0.041367, total_Loss: 1.107940
+
+cmf --> casia: max correct: 2589, accuracy 65.00%
+
+tensor(2589, device='cuda:0')
+Train Epoch: [2/5 (00%)], cls_Loss: 0.694870, transfer_loss: 0.041373, total_Loss: 1.108598
+Train Epoch: [2/5 (32%)], cls_Loss: 0.694266, transfer_loss: 0.041381, total_Loss: 1.108072
+Train Epoch: [2/5 (64%)], cls_Loss: 0.691691, transfer_loss: 0.041266, total_Loss: 1.104350
+Train Epoch: [2/5 (96%)], cls_Loss: 0.689782, transfer_loss: 0.041301, total_Loss: 1.102792
+
+cmf --> casia: max correct: 1485, accuracy 37.00%
+
+tensor(1485, device='cuda:0')
+Train Epoch: [3/5 (00%)], cls_Loss: 0.690019, transfer_loss: 0.041267, total_Loss: 1.102689
+Train Epoch: [3/5 (32%)], cls_Loss: 0.689273, transfer_loss: 0.041184, total_Loss: 1.101116
+Train Epoch: [3/5 (64%)], cls_Loss: 0.688650, transfer_loss: 0.041292, total_Loss: 1.101567
+Train Epoch: [3/5 (96%)], cls_Loss: 0.686664, transfer_loss: 0.041322, total_Loss: 1.099884
+
+cmf --> casia: max correct: 2216, accuracy 55.00%
+
+tensor(2216, device='cuda:0')
+Train Epoch: [4/5 (00%)], cls_Loss: 0.686379, transfer_loss: 0.041321, total_Loss: 1.099584
+Train Epoch: [4/5 (32%)], cls_Loss: 0.684096, transfer_loss: 0.041384, total_Loss: 1.097935
+Train Epoch: [4/5 (64%)], cls_Loss: 0.684174, transfer_loss: 0.041391, total_Loss: 1.098088
+Train Epoch: [4/5 (96%)], cls_Loss: 0.683095, transfer_loss: 0.041359, total_Loss: 1.096684
+
+cmf --> casia: max correct: 2055, accuracy 51.00%
+
+tensor(2055, device='cuda:0')
+Train Epoch: [5/5 (00%)], cls_Loss: 0.682801, transfer_loss: 0.041363, total_Loss: 1.096429
+Train Epoch: [5/5 (32%)], cls_Loss: 0.682016, transfer_loss: 0.041310, total_Loss: 1.095114
+Train Epoch: [5/5 (64%)], cls_Loss: 0.680637, transfer_loss: 0.041265, total_Loss: 1.093291
+Train Epoch: [5/5 (96%)], cls_Loss: 0.679250, transfer_loss: 0.041244, total_Loss: 1.091688
+
+cmf --> casia: max correct: 2379, accuracy 59.00%
+
+tensor(2379, device='cuda:0')
+cmf --> casia: max correct: 597, accuracy 60.00%
+
+3) CMF 30k resnet 18 pretrained true
+
+455 31 8
+Train Epoch: [1/5 (00%)], cls_Loss: 0.705183, transfer_loss: 0.041771, total_Loss: 1.122895
+Train Epoch: [1/5 (32%)], cls_Loss: 0.693613, transfer_loss: 0.041791, total_Loss: 1.111520
+Train Epoch: [1/5 (64%)], cls_Loss: 0.694189, transfer_loss: 0.041649, total_Loss: 1.110683
+Train Epoch: [1/5 (96%)], cls_Loss: 0.692145, transfer_loss: 0.041616, total_Loss: 1.108304
+
+cmf --> casia: max correct: 2552, accuracy 64.00%
+
+tensor(2552, device='cuda:0')
+Train Epoch: [2/5 (00%)], cls_Loss: 0.691662, transfer_loss: 0.041574, total_Loss: 1.107398
+Train Epoch: [2/5 (32%)], cls_Loss: 0.690417, transfer_loss: 0.041349, total_Loss: 1.103911
+Train Epoch: [2/5 (64%)], cls_Loss: 0.688313, transfer_loss: 0.041312, total_Loss: 1.101434
+Train Epoch: [2/5 (96%)], cls_Loss: 0.688160, transfer_loss: 0.041300, total_Loss: 1.101157
+
+cmf --> casia: max correct: 1424, accuracy 35.00%
+
+tensor(1424, device='cuda:0')
+Train Epoch: [3/5 (00%)], cls_Loss: 0.688079, transfer_loss: 0.041337, total_Loss: 1.101453
+Train Epoch: [3/5 (32%)], cls_Loss: 0.687996, transfer_loss: 0.041258, total_Loss: 1.100572
+Train Epoch: [3/5 (64%)], cls_Loss: 0.687207, transfer_loss: 0.041220, total_Loss: 1.099405
+Train Epoch: [3/5 (96%)], cls_Loss: 0.687134, transfer_loss: 0.041286, total_Loss: 1.099994
+
+cmf --> casia: max correct: 2218, accuracy 55.00%
+
+tensor(2218, device='cuda:0')
+Train Epoch: [4/5 (00%)], cls_Loss: 0.687228, transfer_loss: 0.041277, total_Loss: 1.099994
+Train Epoch: [4/5 (32%)], cls_Loss: 0.685920, transfer_loss: 0.041225, total_Loss: 1.098170
+Train Epoch: [4/5 (64%)], cls_Loss: 0.684694, transfer_loss: 0.041202, total_Loss: 1.096710
+Train Epoch: [4/5 (96%)], cls_Loss: 0.683090, transfer_loss: 0.041204, total_Loss: 1.095130
+
+cmf --> casia: max correct: 2205, accuracy 55.00%
+
+tensor(2205, device='cuda:0')
+Train Epoch: [5/5 (00%)], cls_Loss: 0.682806, transfer_loss: 0.041206, total_Loss: 1.094869
+Train Epoch: [5/5 (32%)], cls_Loss: 0.680904, transfer_loss: 0.041199, total_Loss: 1.092897
+Train Epoch: [5/5 (64%)], cls_Loss: 0.680591, transfer_loss: 0.041165, total_Loss: 1.092236
+Train Epoch: [5/5 (96%)], cls_Loss: 0.679420, transfer_loss: 0.041190, total_Loss: 1.091315
+
+cmf --> casia: max correct: 2368, accuracy 59.00%
+
+tensor(2368, device='cuda:0')
+cmf --> casia: max correct: 584, accuracy 58.00%
+
+4) Alex CMF 30 pretrined true
+
+455 31 8
+Train Epoch: [1/5 (00%)], cls_Loss: 0.712781, transfer_loss: 0.040220, total_Loss: 1.114976
+Train Epoch: [1/5 (32%)], cls_Loss: 0.715649, transfer_loss: 0.040805, total_Loss: 1.123696
+Train Epoch: [1/5 (64%)], cls_Loss: 0.717122, transfer_loss: 0.040637, total_Loss: 1.123491
+Train Epoch: [1/5 (96%)], cls_Loss: 0.725546, transfer_loss: 0.040639, total_Loss: 1.131937
+
+cmf --> casia: max correct: 1904, accuracy 47.00%
+
+accuracy_score: 47.85121889922091
+f1_score: 50.43309628888951
+Train Epoch: [2/5 (00%)], cls_Loss: 0.724202, transfer_loss: 0.040649, total_Loss: 1.130689
+Train Epoch: [2/5 (32%)], cls_Loss: 0.720288, transfer_loss: 0.040498, total_Loss: 1.125267
+Train Epoch: [2/5 (64%)], cls_Loss: 0.720871, transfer_loss: 0.040593, total_Loss: 1.126802
+Train Epoch: [2/5 (96%)], cls_Loss: 0.718222, transfer_loss: 0.040459, total_Loss: 1.122809
+
+cmf --> casia: max correct: 2385, accuracy 59.00%
+
+accuracy_score: 59.93968333752199
+f1_score: 71.5521293401842
+
+Train Epoch: [3/5 (00%)], cls_Loss: 0.717982, transfer_loss: 0.040480, total_Loss: 1.122780
+Train Epoch: [3/5 (32%)], cls_Loss: 0.714535, transfer_loss: 0.040487, total_Loss: 1.119402
+Train Epoch: [3/5 (64%)], cls_Loss: 0.713406, transfer_loss: 0.040446, total_Loss: 1.117869
+Train Epoch: [3/5 (96%)], cls_Loss: 0.711643, transfer_loss: 0.040503, total_Loss: 1.116671
+
+cmf --> casia: max correct: 2199, accuracy 55.00%
+
+accuracy_score: 55.26514199547625
+f1_score: 64.9219116982171
+Train Epoch: [4/5 (00%)], cls_Loss: 0.711501, transfer_loss: 0.040491, total_Loss: 1.116414
+Train Epoch: [4/5 (32%)], cls_Loss: 0.708723, transfer_loss: 0.040518, total_Loss: 1.113905
+Train Epoch: [4/5 (64%)], cls_Loss: 0.707128, transfer_loss: 0.040518, total_Loss: 1.112308
+Train Epoch: [4/5 (96%)], cls_Loss: 0.705167, transfer_loss: 0.040512, total_Loss: 1.110283
+
+cmf --> casia: max correct: 2291, accuracy 57.00%
+
+accuracy_score: 57.57728072379995
+f1_score: 67.80229189604279
+
+Train Epoch: [5/5 (00%)], cls_Loss: 0.705034, transfer_loss: 0.040503, total_Loss: 1.110066
+Train Epoch: [5/5 (32%)], cls_Loss: 0.704669, transfer_loss: 0.040503, total_Loss: 1.109699
+Train Epoch: [5/5 (64%)], cls_Loss: 0.703649, transfer_loss: 0.040477, total_Loss: 1.108417
+Train Epoch: [5/5 (96%)], cls_Loss: 0.701507, transfer_loss: 0.040516, total_Loss: 1.106668
+
+cmf --> casia: max correct: 2403, accuracy 60.00%
+
+accuracy_score: 60.39205830610706
+f1_score: 72.075395961802
+994
+cmf --> casia: max correct: 596, accuracy 59.00%
+
+accuracy_score: 61.74598612080648
+f1_score: 74.50364770404569
