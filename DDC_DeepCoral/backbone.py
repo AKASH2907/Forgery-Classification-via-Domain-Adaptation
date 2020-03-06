@@ -15,25 +15,28 @@ class AlexNetFc(nn.Module):
         self.classifier = nn.Sequential()
         for i in range(6):
             self.classifier.add_module(
-                "classifier"+str(i), model_alexnet.classifier[i])
+                "classifier" + str(i), model_alexnet.classifier[i]
+            )
         self.__in_features = model_alexnet.classifier[6].in_features
 
     def forward(self, x):
         x = self.features(x)
-        x = x.view(x.size(0), 256*6*6)
+        x = x.view(x.size(0), 256 * 6 * 6)
         x = self.classifier(x)
         return x
 
     def output_num(self):
         return self.__in_features
 
-class Vgg11bn(nn.Module):
+
+class Vgg11bnFc(nn.Module):
     def __init__(self):
         super(Vgg11bn, self).__init__()
         model_vgg11bn = models.vgg11_bn(pretrained=True)
 
     def output_num(self):
-        return self.__in_features   
+        return self.__in_features
+
 
 class ResNet18Fc(nn.Module):
     def __init__(self):
@@ -195,9 +198,12 @@ class ResNet152Fc(nn.Module):
         return self.__in_features
 
 
-network_dict = {"alexnet": AlexNetFc,
-                "resnet18": ResNet18Fc,
-                "resnet34": ResNet34Fc,
-                "resnet50": ResNet50Fc,
-                "resnet101": ResNet101Fc,
-                "resnet152": ResNet152Fc}
+network_dict = {
+    "alexnet": AlexNetFc,
+    "vgg": Vgg11bnFc,
+    "resnet18": ResNet18Fc,
+    "resnet34": ResNet34Fc,
+    "resnet50": ResNet50Fc,
+    "resnet101": ResNet101Fc,
+    "resnet152": ResNet152Fc,
+}

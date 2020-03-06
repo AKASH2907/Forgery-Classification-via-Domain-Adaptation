@@ -6,16 +6,32 @@ import backbone
 
 
 class Transfer_Net(nn.Module):
-    def __init__(self, num_class, base_net='resnet50', transfer_loss='mmd', use_bottleneck=True, bottleneck_width=256, width=1024):
+    def __init__(
+        self,
+        num_class,
+        base_net="resnet50",
+        transfer_loss="mmd",
+        use_bottleneck=True,
+        bottleneck_width=256,
+        width=1024,
+    ):
         super(Transfer_Net, self).__init__()
         self.base_network = backbone.network_dict[base_net]()
         self.use_bottleneck = use_bottleneck
         self.transfer_loss = transfer_loss
-        bottleneck_list = [nn.Linear(self.base_network.output_num(
-        ), bottleneck_width), nn.BatchNorm1d(bottleneck_width), nn.ReLU(), nn.Dropout(0.5)]
+        bottleneck_list = [
+            nn.Linear(self.base_network.output_num(), bottleneck_width),
+            nn.BatchNorm1d(bottleneck_width),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+        ]
         self.bottleneck_layer = nn.Sequential(*bottleneck_list)
-        classifier_layer_list = [nn.Linear(self.base_network.output_num(), width), nn.ReLU(), nn.Dropout(0.5),
-                                 nn.Linear(width, num_class)]
+        classifier_layer_list = [
+            nn.Linear(self.base_network.output_num(), width),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(width, num_class),
+        ]
         self.classifier_layer = nn.Sequential(*classifier_layer_list)
 
         self.bottleneck_layer[0].weight.data.normal_(0, 0.005)
@@ -50,10 +66,10 @@ class Transfer_Net(nn.Module):
         Returns:
             [tensor] -- adaptation loss tensor
         """
-        if adapt_loss == 'mmd':
+        if adapt_loss == "mmd":
             mmd_loss = mmd.MMD_loss()
             loss = mmd_loss(X, Y)
-        elif adapt_loss == 'coral':
+        elif adapt_loss == "coral":
             loss = CORAL(X, Y)
         else:
             loss = 0
