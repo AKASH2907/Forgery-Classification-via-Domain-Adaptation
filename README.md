@@ -123,6 +123,19 @@ DDC Loss Function:
 [2] Tzeng, Eric et al. “Deep Domain Confusion: Maximizing for Domain Invariance.” ArXiv abs/1412.3474 (2014). [Link](https://arxiv.org/abs/1412.3474) </br>
 [3] Nazeri, Kamyar et al. “EdgeConnect: Generative Image Inpainting with Adversarial Edge Learning.” ArXiv abs/1901.00212 (2019). [Link](https://arxiv.org/abs/1901.00212)
 
+## Citation
+
+If you use this repository, please use this bibtex to cite the paper:
+ ```javascript
+@InProceedings{Kumar_2020_WACV,
+author = {Kumar, Akash and Bhavsar, Arnav and Verma, Rajesh},
+title = {Syn2Real: Forgery Classification via Unsupervised Domain Adaptation},
+booktitle = {The IEEE Winter Conference on Applications of Computer Vision (WACV) Workshops},
+month = {March},
+year = {2020}
+} 
+```
+
 ## Future Work
 - [ ] https://github.com/wuhuikai/GP-GAN -> Image Blending using GANs in high resolution images.
 - [ ] Improve the precision score keeping the high recall.
