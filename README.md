@@ -1,6 +1,6 @@
 # Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation
 
-In this work, using Domain Adversarial Neural Network (DANN) and Deep Domain Confusion (DDC) Domain Adaptation networks, we adapt to the features from a synthetically generated dataset onto a realistic dataset. Our main focus is generalizability across forgery detection in unsupervised conditions, keeping in view to improve the accuracy scores too. 
+This repository provides the official Python implementation of Syn2Real: Forgery Classification via Unsupervised Domain Adaptation. [(Link)](http://openaccess.thecvf.com/content_WACVW_2020/html/w4/Kumar_Syn2Real_Forgery_Classification_via_Unsupervised_Domain_Adaptation_WACVW_2020_paper.html) In this work, using Domain Adversarial Neural Network (DANN) and Deep Domain Confusion (DDC) Domain Adaptation networks, we adapt to the features from a synthetically generated dataset onto a realistic dataset. Our main focus is generalizability across forgery detection in unsupervised conditions, keeping in view to improve the accuracy scores too. 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75251987-bef28d80-5801-11ea-9a15-7625e621368a.png">
@@ -20,6 +20,15 @@ In domain adaptation, we adapt the target domain feature space to source domain 
 We can't apply direct transfer learning in this case. Mainly, because of two reasons:
 * The number of images are less and the number of parameters needed are huge. It simply overfits the dataset and the test time perfromance is very poor.
 * Pre-trained archirectures are trained on ImageNet dataset in which there is provision for forged images as such. So, it may not perform well in our case.
+
+## Dependencies
+
+Tested on Python 3.6.x and Keras 2.3.0 with TF backend version 1.14.0.
+* Numpy (1.16.4)
+* OpenCV (4.1.0)
+* Pandas (0.25.3)
+* Scikit-learn (0.22.1)
+* PyTorch (1.2.0)
 
 ## Getting Started
 
