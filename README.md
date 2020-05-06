@@ -1,5 +1,7 @@
 # Copy-Move-Forgery-Classification-via-Unsupervised-Domain-Adaptation
 
+[![WACVW](https://img.shields.io/badge/WACVW-CVF-b31b1b.svg)](http://openaccess.thecvf.com/content_WACVW_2020/html/w4/Kumar_Syn2Real_Forgery_Classification_via_Unsupervised_Domain_Adaptation_WACVW_2020_paper.html)
+
 This repository provides the official Python implementation of Syn2Real: Forgery Classification via Unsupervised Domain Adaptation. [(Link)](http://openaccess.thecvf.com/content_WACVW_2020/html/w4/Kumar_Syn2Real_Forgery_Classification_via_Unsupervised_Domain_Adaptation_WACVW_2020_paper.html) In this work, using Domain Adversarial Neural Network (DANN) and Deep Domain Confusion (DDC) Domain Adaptation networks, we adapt to the features from a synthetically generated dataset onto a realistic dataset. Our main focus is generalizability across forgery detection in unsupervised conditions, keeping in view to improve the accuracy scores too. 
 
 <p align="center">
@@ -56,11 +58,15 @@ Tested on Python 3.6.x and Keras 2.3.0 with TF backend version 1.14.0.
   <img src="https://user-images.githubusercontent.com/22872200/75569484-354df480-5a7b-11ea-8f9e-eda5b54c6253.png">
 </p>
 
+* To generate inpainted images, have a look in this repository:-> [Edge-Connect](https://github.com/knazeri/edge-connect#2-testing)
+
 2) **Copy-Move Forgery:** Images alongwith their segmentation is mask selected. We compare the mask of all the areas. Keeping a minimum threshold, we select the mask with the largest area. We apply a image matting so that pasted region could easily blend in. Overnight 60,000 images can be generated.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22872200/75569534-4d257880-5a7b-11ea-8636-3495d521d478.png">
 </p>
+
+* For CMF data generation, please look into my other repository:-> [Synthetic data Generation](https://github.com/AKASH2907/synthetic_dataset_generation)
 
 ### 2. Domain Adaptation 
 
@@ -135,7 +141,7 @@ DDC Loss Function:
 ## Citation
 
 If you use this repository, please use this bibtex to cite the paper:
- ```javascript
+ ```
 @InProceedings{Kumar_2020_WACV,
 author = {Kumar, Akash and Bhavsar, Arnav and Verma, Rajesh},
 title = {Syn2Real: Forgery Classification via Unsupervised Domain Adaptation},
